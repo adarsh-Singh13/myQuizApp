@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {useTheme} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamsList} from '../../Navigator/AppNavigator';
+import {RootStackParamsList} from '../../Navigator/AppNavigator/AppNavigator';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {GestureDetector, Gesture} from 'react-native-gesture-handler';
 import {Directions} from 'react-native-gesture-handler';

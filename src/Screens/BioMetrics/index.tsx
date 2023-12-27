@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamsList } from '../../Navigator/AppNavigator';
+import { RootStackParamsList } from '../../Navigator/AppNavigator/AppNavigator';
 
 
 interface BioMetricsProps{

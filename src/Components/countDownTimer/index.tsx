@@ -12,7 +12,7 @@ interface CountdownTimerProps {
 
 export default function CountdownTimer({initialTime}: CountdownTimerProps) {
   const [seconds, setSeconds] = useState(initialTime); // Initial time in seconds
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;

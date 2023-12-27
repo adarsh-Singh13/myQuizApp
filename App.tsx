@@ -13,7 +13,7 @@ import type {StatusBarStyle} from 'react-native';
  * ? Local Imports
  */
 
-import AppNavigator from './src/Navigator/AppNavigator';
+import AppNavigator from './src/Navigator/AppNavigator/AppNavigator';
 
 
 const STYLES = ['default', 'dark-content','light-content'] as const;

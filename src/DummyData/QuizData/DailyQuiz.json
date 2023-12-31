@@ -1,50 +1,740 @@
 [
-    {
-      "id": 1,
-      "title": "Gen. Knowledge",
-      "timing": "350",
-      "totalQuestions": [
-        {
-          "id": 1,
-          "question": "What is the capital of France?",
-          "options": ["Berlin", "Paris", "Madrid", "Rome"],
-          "correctOption": "Paris",
-          "positiveMarks" : "1.0",
-          "negativeMarks" : "0.25"
-        },
-        {
-            "id": 2,
-            "question": "What is the capital of India?",
-            "options": ["Mumbai", "Delhi", "Kolkata", "Lucknow"],
-            "correctOption": "Delhi",
-            "positiveMarks" : "1.0",
-            "negativeMarks" : "0.25"
-        },
-        {
-            "id": 3,
-            "question": "What is the capital of Russia?",
-            "options": ["Berlin", "Paris", "Madrid", "Moscow"],
-            "correctOption": "Moscow",
-            "positiveMarks" : "1.3",
-            "negativeMarks" : "0.25"
-        },
-        {
-            "id": 4,
-            "question": "What is the capital of China?",
-            "options": ["SHanghai", "Tokyo", "Beijing", "None of These"],
-            "correctOption": "Beijing",
-            "positiveMarks" : "1.0",
-            "negativeMarks" : "0.25"
-        },
-        {
-            "id": 5,
-            "question": "What is the capital of Australia?",
-            "options": ["Perth", "Canberra", "Sydney", "Adelaide"],
-            "correctOption": "Paris",
-            "positiveMarks" : "1.2",
-            "negativeMarks" : "0.25"
-        }
-      ]
-    }
-  ]
-  
+  {
+    "quizId": "1",
+    "title": "Gen. Knowledge",
+    "topic": "General Awareness Quiz",
+    "topic_Exam": "IBPS Bank PO",
+    "exam_year": "2023",
+    "rewards": "5",
+    "timing": 300,
+    "totalQuestions": [
+      {
+        "id": 1,
+        "question": "What is the capital of France?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Rome"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 2,
+        "question": "What is the capital of India?",
+        "options": [
+          "Mumbai",
+          "Delhi",
+          "Kolkata",
+          "Lucknow"
+        ],
+        "correctOption": "Delhi",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 3,
+        "question": "What is the capital of Russia?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Moscow"
+        ],
+        "correctOption": "Moscow",
+        "positiveMarks": "1.3",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 4,
+        "question": "What is the capital of China?",
+        "options": [
+          "SHanghai",
+          "Tokyo",
+          "Beijing",
+          "None of These"
+        ],
+        "correctOption": "Beijing",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 5,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 6,
+        "question": "What is the capital of Srilanka?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 7,
+        "question": "What is the capital of Germany?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 8,
+        "question": "What is the capital of Cuba?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 9,
+        "question": "What is the capital of Brazil?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 10,
+        "question": "What is the capital of Namibia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      }
+    ]
+  },
+  {
+    "quizId": "2",
+    "title": "English",
+    "timing": 600,
+    "topic": "General Awareness Quiz",
+    "topic_Exam": "IBPS Bank PO/Clerk",
+    "exam_year": "2023",
+    "rewards": "10",
+    "totalQuestions": [
+      {
+        "id": 1,
+        "question": "What is the capital of India?",
+        "options": [
+          "Mumbai",
+          "Delhi",
+          "Kolkata",
+          "Lucknow" 
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 2,
+        "question": "What is the capital of France?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Rome"
+        ],
+        "correctOption": "Delhi",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 3,
+        "question": "What is the capital of Russia?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Moscow"
+        ],
+        "correctOption": "Moscow",
+        "positiveMarks": "1.3",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 4,
+        "question": "What is the capital of China?",
+        "options": [
+          "SHanghai",
+          "Tokyo",
+          "Beijing",
+          "None of These"
+        ],
+        "correctOption": "Beijing",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 5,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      }
+    ]
+  },
+  {
+    "quizId": "3",
+    "title": "Reasoning",
+    "topic": "Reasoning Puzzle Quiz",
+    "topic_Exam": "IBPS Bank PO",
+    "exam_year": "2023",
+    "rewards": "5",
+    "timing": 300,
+    "totalQuestions": [
+      {
+        "id": 1,
+        "question": "What is the capital of Russia?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Moscow"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 2,
+        "question": "What is the capital of India?",
+        "options": [
+          "Mumbai",
+          "Delhi",
+          "Kolkata",
+          "Lucknow"
+        ],
+        "correctOption": "Delhi",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 3,
+        "question": "What is the capital of France?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Rome"
+        ],
+        "correctOption": "Moscow",
+        "positiveMarks": "1.3",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 4,
+        "question": "What is the capital of China?",
+        "options": [
+          "SHanghai",
+          "Tokyo",
+          "Beijing",
+          "None of These"
+        ],
+        "correctOption": "Beijing",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 5,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      }
+    ]
+  },
+  {
+    "quizId": "4",
+    "title": "Quant",
+    "topic": "Quantitative Based Quiz",
+    "topic_Exam": "IBPS Bank PO",
+    "exam_year": "2023",
+    "rewards": "5",
+    "timing": 300,
+    "totalQuestions": [
+      {
+        "id": 4,
+        "question": "What is the capital of China?",
+        "options": [
+          "SHanghai",
+          "Tokyo",
+          "Beijing",
+          "None of These"
+        ],
+        "correctOption": "Beijing",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 2,
+        "question": "What is the capital of India?",
+        "options": [
+          "Mumbai",
+          "Delhi",
+          "Kolkata",
+          "Lucknow"
+        ],
+        "correctOption": "Delhi",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 3,
+        "question": "What is the capital of Russia?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Moscow"
+        ],
+        "correctOption": "Moscow",
+        "positiveMarks": "1.3",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 1,
+        "question": "What is the capital of France?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Rome"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 5,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      }
+    ]
+  },
+  {
+    "quizId": "5",
+    "title": "Gen. Knowledge",
+    "topic": "General Awareness Quiz",
+    "topic_Exam": "IBPS Bank PO",
+    "exam_year": "2023",
+    "rewards": "5",
+    "timing": 300,
+    "totalQuestions": [
+      {
+        "id": 1,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 2,
+        "question": "What is the capital of India?",
+        "options": [
+          "Mumbai",
+          "Delhi",
+          "Kolkata",
+          "Lucknow"
+        ],
+        "correctOption": "Delhi",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 3,
+        "question": "What is the capital of Russia?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Moscow"
+        ],
+        "correctOption": "Moscow",
+        "positiveMarks": "1.3",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 4,
+        "question": "What is the capital of China?",
+        "options": [
+          "SHanghai",
+          "Tokyo",
+          "Beijing",
+          "None of These"
+        ],
+        "correctOption": "Beijing",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 5,
+        "question": "What is the capital of France?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Rome"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 6,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 7,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 8,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 9,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 10,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      }
+    ]
+  },
+  {
+    "quizId": "6",
+    "title": "English",
+    "timing": 600,
+    "topic": "General Awareness Quiz",
+    "topic_Exam": "IBPS Bank PO/Clerk",
+    "exam_year": "2023",
+    "rewards": "10",
+    "totalQuestions": [
+      {
+        "id": 1,
+        "question": "What is the capital of France?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Rome"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 2,
+        "question": "What is the capital of India?",
+        "options": [
+          "Mumbai",
+          "Delhi",
+          "Kolkata",
+          "Lucknow"
+        ],
+        "correctOption": "Delhi",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 3,
+        "question": "What is the capital of Russia?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Moscow"
+        ],
+        "correctOption": "Moscow",
+        "positiveMarks": "1.3",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 4,
+        "question": "What is the capital of China?",
+        "options": [
+          "SHanghai",
+          "Tokyo",
+          "Beijing",
+          "None of These"
+        ],
+        "correctOption": "Beijing",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 5,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      }
+    ]
+  },
+  {
+    "quizId": "7",
+    "title": "Reasoning",
+    "topic": "Reasoning Puzzle Quiz",
+    "topic_Exam": "IBPS Bank PO",
+    "exam_year": "2023",
+    "rewards": "5",
+    "timing": 300,
+    "totalQuestions": [
+      {
+        "id": 1,
+        "question": "What is the capital of France?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Rome"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 2,
+        "question": "What is the capital of India?",
+        "options": [
+          "Mumbai",
+          "Delhi",
+          "Kolkata",
+          "Lucknow"
+        ],
+        "correctOption": "Delhi",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 3,
+        "question": "What is the capital of Russia?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Moscow"
+        ],
+        "correctOption": "Moscow",
+        "positiveMarks": "1.3",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 4,
+        "question": "What is the capital of China?",
+        "options": [
+          "SHanghai",
+          "Tokyo",
+          "Beijing",
+          "None of These"
+        ],
+        "correctOption": "Beijing",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 5,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      }
+    ]
+  },
+  {
+    "quizId": "8",
+    "title": "Quant",
+    "topic": "Quantitative Based Quiz",
+    "topic_Exam": "IBPS Bank PO",
+    "exam_year": "2023",
+    "rewards": "5",
+    "timing": 300,
+    "totalQuestions": [
+      {
+        "id": 1,
+        "question": "What is the capital of France?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Rome"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 2,
+        "question": "What is the capital of India?",
+        "options": [
+          "Mumbai",
+          "Delhi",
+          "Kolkata",
+          "Lucknow"
+        ],
+        "correctOption": "Delhi",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 3,
+        "question": "What is the capital of Russia?",
+        "options": [
+          "Berlin",
+          "Paris",
+          "Madrid",
+          "Moscow"
+        ],
+        "correctOption": "Moscow",
+        "positiveMarks": "1.3",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 4,
+        "question": "What is the capital of China?",
+        "options": [
+          "SHanghai",
+          "Tokyo",
+          "Beijing",
+          "None of These"
+        ],
+        "correctOption": "Beijing",
+        "positiveMarks": "1.0",
+        "negativeMarks": "0.25"
+      },
+      {
+        "id": 5,
+        "question": "What is the capital of Australia?",
+        "options": [
+          "Perth",
+          "Canberra",
+          "Sydney",
+          "Adelaide"
+        ],
+        "correctOption": "Paris",
+        "positiveMarks": "1.2",
+        "negativeMarks": "0.25"
+      }
+    ]
+  }
+]

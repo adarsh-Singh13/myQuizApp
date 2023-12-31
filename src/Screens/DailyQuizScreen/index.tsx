@@ -18,7 +18,7 @@ interface onboardingProps {
   navigation: StackNavigationProp<RootStackParamsList, 'DailyQuiz'>;
 }
 
-export default function DailyQuizScreen() {
+export default function DailyQuizScreen () {
   const theme = useTheme();
   const {colors} = theme;
   const styles = useMemo(() => createStyles(theme), [theme]);
@@ -30,7 +30,7 @@ export default function DailyQuizScreen() {
   const questionOptions = currentQuestion.options;
   const questionsArray = quizData[0]?.totalQuestions || [];
   const numOfQuestions = questionsArray.length;
-  // console.log(numOfQuestions);
+  console.log(numOfQuestions);
   // console.log(quizData[0].timing);
   
   const handleCancel = () => {
@@ -42,7 +42,9 @@ export default function DailyQuizScreen() {
   };
 
   const handleOptionClick = (index: any) => {
-    setSelectedOption(index);
+    setSelectedOption(prevSelected => {
+      return prevSelected === index ? null : index;
+    });
   };
 
   const handleSaveAndNextTap = () => {

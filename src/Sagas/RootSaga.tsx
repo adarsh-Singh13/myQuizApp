@@ -1,16 +1,22 @@
-import { all, fork, takeLatest } from "redux-saga/effects";
+import { ForkEffect, all, fork, takeLatest } from "redux-saga/effects";
 import { QuizDataListTypes } from "../Stores/DailyQuizList/Actions";
 import { networkSaga, offlineActionTypes } from "react-native-offline";
+
+
 import { fetchAllQuizzesSaga } from "./DailyQuizDataSaga";
+import { ConnectivityArgs } from "react-native-offline/dist/src/types";
 
 
 export default function* rootSaga () {
     yield all([
-        fork(networkSaga, {
-          pingInterval: 30000,
-        }),
+      fork({
+        context: yourContext,
+        fn: networkSaga as (args?: ConnectivityArgs | undefined) => Generator<ForkEffect<void>, void, unknown>
+      }),
+      
+        takeLatest(offlineActionTypes.CONNECTION_CHANGE, runQueue),
 
-        takeLatest(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS, GET_MYALL_QUIZLIST_DETAILS),
+        takeLatest(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS, fetchAllQuizzesSaga),
 
     ])
 }

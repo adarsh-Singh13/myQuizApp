@@ -1,45 +1,42 @@
 import { INITIAL_STATE } from "./InitialState";
 import { QuizDataListTypes } from "./Actions";
-import { createReducer, ActionReducerMapBuilder } from "@reduxjs/toolkit";
+import { createReducer, Reducer } from 'reduxsauce';
 
-const getmyAllQuizListDetailsLoading = (state: typeof INITIAL_STATE) => {
-  return {
-    ...state,
-    loaders: {
-      ...state.loaders,
-      myAllQuizListDetailsLoader: true,
-    },
+interface MyState {
+  loaders: {
+    myAllQuizListDetailsLoader: boolean;
+    myAllQuizListDetailsLoader2: boolean; 
   };
-};
+  MyAllQuizListDetails: any; 
+}
 
-const getmyAllQuizListDetailsSuccess = (
-  state: typeof INITIAL_STATE,
-  action: { payload: { data: any } }
-) => {
-  const { data } = action.payload;
-  return {
-    ...state,
-    myAllQuizListDetails: data,
-    loaders: {
-      ...state.loaders,
-      myAllQuizListDetailsLoader: false,
-    },
-  };
-};
+const fetchMyAllQuizListDetailsLoading: Reducer<MyState> = (state: { loaders: any; }) => ({
+  ...state,
+  loaders: {
+    ...state.loaders,
+    myAllQuizListDetailsLoader: true,
+  },
+});
 
-const getmyAllQuizListDetailsFailure = (state: typeof INITIAL_STATE) => {
-  return {
-    ...state,
-    loaders: {
-      ...state.loaders,
-      myAllQuizListDetailsLoader: false,
-    },
-  };
-};
+const fetchMyAllQuizListDetailsSuccess: Reducer<MyState> = (state: { loaders: any; }, { data }: any) => ({
+  ...state,
+  MyAllQuizListDetails: data,
+  loaders: {
+    ...state.loaders,
+    myAllQuizListDetailsLoader: false,
+  },
+});
 
-export const reducer = createReducer(INITIAL_STATE, (builder: ActionReducerMapBuilder<typeof INITIAL_STATE>) => {
-  builder
-    .addCase(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_LOADING, getmyAllQuizListDetailsLoading)
-    .addCase(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_SUCCESS, getmyAllQuizListDetailsSuccess)
-    .addCase(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_FAILURE, getmyAllQuizListDetailsFailure);
+const fetchMyAllQuizListDetailsFailure: Reducer<MyState> = (state: { loaders: any; }) => ({
+  ...state,
+  loaders: {
+    ...state.loaders,
+    myAllQuizListDetailsLoader2: false,
+  },
+});
+
+export const reducer = createReducer(INITIAL_STATE, {
+  [QuizDataListTypes.GET_MY_ALL_QUIZ_LIST_DETAILS_LOADING]: fetchMyAllQuizListDetailsLoading,
+  [QuizDataListTypes.GET_MY_ALL_QUIZ_LIST_DETAILS_SUCCESS]: fetchMyAllQuizListDetailsSuccess,
+  [QuizDataListTypes.GET_MY_ALL_QUIZ_LIST_DETAILS_FAILURE]: fetchMyAllQuizListDetailsFailure,
 });

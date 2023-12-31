@@ -148,7 +148,7 @@ export default (theme: ExtendedTheme) => {
       borderColor: '#d71d1d',
       borderWidth: 1,
       padding: 10,
-      width: wp('30%'),
+      width: wp('35%'),
       borderRadius: 20,
       justifyContent: 'center',
       alignItems: 'center'
@@ -157,7 +157,7 @@ export default (theme: ExtendedTheme) => {
       backgroundColor: '#000000',
       borderWidth: 1,
       padding: 10,
-      width: wp('32%'),
+      width: wp('37%'),
       borderRadius: 20,
       justifyContent: 'center',
       alignItems: 'center'

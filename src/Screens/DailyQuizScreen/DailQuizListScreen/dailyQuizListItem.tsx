@@ -5,17 +5,16 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 
 
 import { connect } from 'react-redux';
-import MyAllQuizLIstActions from '../../../Stores/DailyQuizList/Actions';
+import QuizDataListTypes from '../../../Stores/DailyQuizList/Actions';
 
 
-const  DailyQuizListItem = function ({ quizData, myAllQuizListDetails }: any) {
+const  DailyQuizListItem = ({ quizData, allQuizList }: any) => {
 
   useEffect(() => {
-    myAllQuizListDetails();
-  }, [myAllQuizListDetails]);
+    allQuizList();
+  }, [allQuizList]);
 
 
-  console.log('Quiz Data:', myAllQuizListDetails);
   console.log('Quiz Data:', quizData);
 
   const quizDataRender = () => {
@@ -43,12 +42,16 @@ const  DailyQuizListItem = function ({ quizData, myAllQuizListDetails }: any) {
 }
 
 
-const mapStateToProps = (state: { quiz: { quizData: any; }; }) => ({
-  quizData: state.quiz.quizData, 
-});
+const mapStateToProps = (state: any ) => {
+  console.log("SSS", state);
+  
+ return { 
+  quizData: state.quiz.MyAllQuizListDetails,
+ }
+}
 
 const mapDispatchToProps = (dispatch: any) => ({
-  myAllQuizListDetails: (data: any) => dispatch(MyAllQuizLIstActions.GET_MYALL_QUIZLIST_DETAILS(data)),
+  allQuizList: (params: any) => dispatch(QuizDataListTypes.fetchMyAllQuizListDetails(params)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DailyQuizListItem);
@@ -63,4 +66,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF'
   },
 })
-

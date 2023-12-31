@@ -2,26 +2,23 @@ import { call, put, takeLatest } from 'redux-saga/effects';
 import { QuizDataListTypes } from '../Stores/DailyQuizList/Actions';
 import  { DailyQuizService }  from '../service/Api/DailyQuizService';
 
-interface ActionPayload {
-  payload: any; 
-}
 
-export function* fetchAllQuizzesSaga(payload: ActionPayload): Generator<any, void, any> {
+export function* fetchAllQuizzesSaga(payload) {
   console.log("Get Daily Quiz Response:", payload);
   
-  yield put(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_LOADING());
+  yield put(QuizDataListTypes.fetchMyAllQuizListDetailsLoading());
 
   try {
     let successData = yield call(DailyQuizService.getDailyQuizData, payload);
 
     if (successData) {
-      yield put(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_SUCCESS(successData));  
+      yield put(QuizDataListTypes.fetchMyAllQuizListDetailsSuccess(successData));  
     } else {
-      yield put(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_FAILURE());
+      yield put(QuizDataListTypes.fetchMyAllQuizListDetailsFailure());
     }
   } catch (error) {
     console.warn('Error in Fetching ALl Quiz List:', error)
-    yield put(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_FAILURE()); 
+    yield put(QuizDataListTypes.fetchMyAllQuizListDetailsFailure()); 
   }
 }
 

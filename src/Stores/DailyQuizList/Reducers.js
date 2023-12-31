@@ -1,16 +1,8 @@
 import { INITIAL_STATE } from "./InitialState";
 import { QuizDataListTypes } from "./Actions";
-import { createReducer, Reducer } from 'reduxsauce';
+import { createReducer } from 'reduxsauce';
 
-interface MyState {
-  loaders: {
-    myAllQuizListDetailsLoader: boolean;
-    myAllQuizListDetailsLoader2: boolean; 
-  };
-  MyAllQuizListDetails: any; 
-}
-
-const fetchMyAllQuizListDetailsLoading: Reducer<MyState> = (state: { loaders: any; }) => ({
+const fetchMyAllQuizListDetailsLoading = (state) => ({
   ...state,
   loaders: {
     ...state.loaders,
@@ -18,7 +10,7 @@ const fetchMyAllQuizListDetailsLoading: Reducer<MyState> = (state: { loaders: an
   },
 });
 
-const fetchMyAllQuizListDetailsSuccess: Reducer<MyState> = (state: { loaders: any; }, { data }: any) => ({
+const fetchMyAllQuizListDetailsSuccess = (state) => ({
   ...state,
   MyAllQuizListDetails: data,
   loaders: {
@@ -27,7 +19,7 @@ const fetchMyAllQuizListDetailsSuccess: Reducer<MyState> = (state: { loaders: an
   },
 });
 
-const fetchMyAllQuizListDetailsFailure: Reducer<MyState> = (state: { loaders: any; }) => ({
+const fetchMyAllQuizListDetailsFailure = (state) => ({
   ...state,
   loaders: {
     ...state.loaders,

@@ -4,7 +4,7 @@ const { Types, Creators } = createActions ({
   fetchMyAllQuizListDetails: ['payload'],
   fetchMyAllQuizListDetailsLoading: null,
   fetchMyAllQuizListDetailsSuccess: ['data'],
-  fetchMyAllQuizListDetailsFailure: ['data'],
+  fetchMyAllQuizListDetailsFailure: ['errorMessage'],
 })
 
 

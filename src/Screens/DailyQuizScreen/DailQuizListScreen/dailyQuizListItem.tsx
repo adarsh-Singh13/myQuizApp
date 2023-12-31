@@ -4,53 +4,18 @@ import CustomdailyQuiz from './customdailyQuiz'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 
-import { fetchQuizzes } from '../../../Stores/DailyQuizList/Actions';
-import { useSelector, useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import MyAllQuizLIstActions from '../../../Stores/DailyQuizList/Actions';
 
-// export default function DailyQuizListItem() {
-//   const [quizId, setQuizId] = useState()
 
-//   const dispatch = useDispatch();
-  
-//   useEffect(() => {
-//     dispatch(fetchQuizzes());
-//   }, [dispatch]);
-  
-//   const quizData = useSelector((state: any) => state.dailyQuizList);
-//   console.log('Quiz Data:', quizData);
-//   const handleMyQuizListItems = () => {};
+const  DailyQuizListItem = function ({ quizData, myAllQuizListDetails }: any) {
 
-//   const quizDataRender = ({ item }: { item: any }) => {
-//     console.log("ITEMS", item);
-    
-//     return <CustomdailyQuiz quizData={item} />;
-//   }
-
-//   return (
-//     <View style={styles.container}>
-//       <FlatList
-//         data={quizData}
-//         renderItem={quizDataRender}
-//         scrollEnabled
-//         scrollToOverflowEnabled
-//         showsVerticalScrollIndicator={false}
-//         keyExtractor={(item, index) => index.toString()}
-//         style={styles.flatlist}
-//       />
-//       {/* <View style={{marginBottom: hp('10%')}}/> */}
-//     </View>
-//   )
-// }
-
-export default function DailyQuizListItem({ route }: any) {
-  const dispatch = useDispatch();
-  // const { selectedItem } = route.params;
   useEffect(() => {
-    dispatch(fetchQuizzes());
-  }, [dispatch]);
-  
-  const quizData = useSelector((state: any) => state.quizzes);
+    myAllQuizListDetails();
+  }, [myAllQuizListDetails]);
 
+
+  console.log('Quiz Data:', myAllQuizListDetails);
   console.log('Quiz Data:', quizData);
 
   const quizDataRender = () => {
@@ -78,6 +43,16 @@ export default function DailyQuizListItem({ route }: any) {
 }
 
 
+const mapStateToProps = (state: { quiz: { quizData: any; }; }) => ({
+  quizData: state.quiz.quizData, 
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  myAllQuizListDetails: (data: any) => dispatch(MyAllQuizLIstActions.GET_MYALL_QUIZLIST_DETAILS(data)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(DailyQuizListItem);
+
 
 const styles = StyleSheet.create({
   container: {
@@ -88,3 +63,4 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF'
   },
 })
+

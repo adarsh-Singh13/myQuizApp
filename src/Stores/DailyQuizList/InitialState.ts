@@ -2,10 +2,16 @@
 
 export const INITIAL_STATE = {
   Is_Loading: false,
-  myAllQuizListDetails : [],
+  MyAllQuizListDetails : [],
 
   loaders: {
 		myAllQuizListDetailsLoader : false,	
 	},
+
+  loaders1: {
+		myAllQuizListDetailsLoader2: false,
+		
+	},
+
   
 }

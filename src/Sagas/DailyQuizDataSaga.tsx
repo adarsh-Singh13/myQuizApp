@@ -1,22 +1,28 @@
-import { call, put, takeLatest, CallEffect, PutEffect } from 'redux-saga/effects';
-import { QuizActionTypes, fetchQuizzesFailure, fetchQuizzesSuccess, FetchQuizzesFailureAction, FetchQuizzesSuccessAction } from '../Stores/DailyQuizlist/Actions';
-import { DailyQuizService } from '../service/Api/DailyQuizService';
+import { call, put, takeLatest } from 'redux-saga/effects';
+import { QuizDataListTypes } from '../Stores/DailyQuizList/Actions';
+import  { DailyQuizService }  from '../service/Api/DailyQuizService';
 
-export function* fetchAllQuizzesSaga({ payload }: { payload: any }): Generator<
-  CallEffect<any> | PutEffect<FetchQuizzesSuccessAction | FetchQuizzesFailureAction>,
-  void,
-  any
-> {
+interface ActionPayload {
+  payload: any; 
+}
+
+export function* fetchAllQuizzesSaga(payload: ActionPayload): Generator<any, void, any> {
+  console.log("Get Daily Quiz Response:", payload);
+  
+  yield put(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_LOADING());
+
   try {
-    const quizData = yield call(DailyQuizService.getDailyQuizData, payload);
+    let successData = yield call(DailyQuizService.getDailyQuizData, payload);
 
-    if (quizData) {
-      yield put(fetchQuizzesSuccess(quizData)); // Dispatch success action with retrieved data
+    if (successData) {
+      yield put(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_SUCCESS(successData));  
     } else {
-      yield put(fetchQuizzesFailure('Error: Unable to fetch quiz data')); // Dispatch failure action if data fetching fails
+      yield put(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_FAILURE());
     }
-  } catch (error : any) {
-    yield put(fetchQuizzesFailure(error)); // Dispatch failure action if an error occurs
+  } catch (error) {
+    console.warn('Error in Fetching ALl Quiz List:', error)
+    yield put(QuizDataListTypes.GET_MYALL_QUIZLIST_DETAILS_FAILURE()); 
   }
 }
+
 

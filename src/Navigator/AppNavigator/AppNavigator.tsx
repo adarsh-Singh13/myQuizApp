@@ -5,7 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
  * ? Local Imports
  */
 import { Provider } from 'react-redux';
-import {store} from '../../Stores/Stores/Stores';
+import store from '../../Stores/Stores/store';
 import BioMetrics from '../../Screens/BioMetrics';
 import Onboarding from '../../Screens/Onboarding';
 import DailyQuizScreen from '../../Screens/DailyQuizScreen';

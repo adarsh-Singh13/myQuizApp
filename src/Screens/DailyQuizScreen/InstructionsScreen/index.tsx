@@ -1,11 +1,8 @@
 import React, {useEffect} from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView } from 'react-native'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { fetchQuizzes} from '../../../Stores/DailyQuizList/Actions';
-import { useSelector, useDispatch } from 'react-redux';
-import { useRoute } from '@react-navigation/native';
 /**
  * ? local Imports
  */
@@ -14,36 +11,25 @@ import DropdownPicker from '../../../Components/CustomDropDown/DropdownPicker';
 import ArrowDropdownPicker from '../../../Components/CustomDropDown/ArrowDropdownPicker';
 
 
-
 export default function InstructionsCreen() {
-    const route = useRoute();
-    
-    const navigation = useNavigation();
-    const dispatch = useDispatch();
   
-    useEffect(() => {
-      dispatch(fetchQuizzes());
-    }, [dispatch]);
+    const route = useRoute();
+    const { quizId, quizData }: any = route.params ?? {};
+    // console.log("quizRoutequizRoute", quizData);    
+
+    const navigation = useNavigation();
+  
+    // console.log("quizIdquizId", id);
     
-    const quizData = useSelector((state: any) => state.dailyQuizList);
-   
-    // if (!route || !route.params || !route.quizData.params.topic || !route.params.topic_Exam) {
-    //     return null; 
-    //   }
-      const { topic, topic_Exam } = route.params;
-
-      console.log("qqqq", topic);
-    //   console.log("qqq", topic_Exam);
-
     const handleOnstartPress = () => {
-        navigation.navigate('DailyQuiz');
+        navigation.navigate('DailyQuiz', { quizId: quizData.quizId, quizData: quizData });
     };
 
     const options = ["English", "Hindi"]
 
     return (
         <SafeAreaView style={{flex: 1}}>
-          {quizData && quizData.dailyQuizList && quizData.dailyQuizList.length > 0 ? (
+          {/* {quizData && quizData.dailyQuizList && quizData.dailyQuizList.length > 0 ? ( */}
               <View style={styles.headerContainer}>
               <Text style={styles.instText}>Instructions</Text>
               <View style={styles.topicContainer}>
@@ -52,8 +38,8 @@ export default function InstructionsCreen() {
                   <Text style={[styles.quizTopicTitle, { letterSpacing: 0.3, }]}>{HelperService.currentDateStringWithDotFormat()}</Text>
               </View>
           </View> 
-          ) : []
-          }
+           {/* ) : []
+          }  */}
             <View style={styles.instrctnContainer}>
                 <Text style={styles.warngText}>Please read the following instructions very carefully</Text>
                 <Text style={styles.warngText2}>
@@ -113,7 +99,8 @@ export default function InstructionsCreen() {
 const styles = StyleSheet.create({
     headerContainer: {
         width: wp('100%'),
-        height: hp('16/%'),
+        height: hp('16%'),
+        // marginTop: hp('56%'),
         backgroundColor: "#FFFFFF",
         elevation: 5,
     },

@@ -18,6 +18,7 @@ interface Style {
     reviewIcon: ViewStyle;
     questText: TextStyle;
     questionText: TextStyle;
+    instructionsText: TextStyle;
     optionButton: ViewStyle;
     selectedOption: ViewStyle;
     saveAndNextButton: ViewStyle;
@@ -32,6 +33,8 @@ interface Style {
     textStyles: TextStyle;
     btnContainer: ViewStyle;
     buttonView: ViewStyle;
+    scrollViewContent: ViewStyle;
+    scrollInnerViewContent: ViewStyle;
 }
 
 export default (theme: ExtendedTheme) => {
@@ -41,12 +44,22 @@ export default (theme: ExtendedTheme) => {
       // backgroundColor: '#ce1717',
       flex: 1,
     },
+    scrollViewContent: {
+      flexGrow: 1, 
+      justifyContent: 'flex-start',
+      // backgroundColor: 'red',
+      paddingBottom: hp('13%')
+    },
     containerBar: {
       //  paddingTop: 5,
       backgroundColor: '#ffffff',
       elevation: 2,
       justifyContent: 'space-evenly',
       alignItems: 'stretch',
+    },
+    scrollInnerViewContent: {
+      paddingHorizontal: wp('0.5%'), 
+      // paddingTop: wp('2%'),
     },
     questionContainer: {
       margin: 16,
@@ -92,10 +105,10 @@ export default (theme: ExtendedTheme) => {
       color: '#181818',
     },
     questText: {
-      fontSize: 18,
-      marginBottom: 6,
+      fontSize: 20,
+      margin: 6,
       marginLeft: wp('2%'),
-      fontFamily: 'NotoSansDevanagari_Condensed-SemiBold',
+      fontFamily: 'Cabin_Condensed-Bold',
       letterSpacing: .5,
       color: '#000000'
     },
@@ -105,7 +118,14 @@ export default (theme: ExtendedTheme) => {
       marginLeft: 12,
       // fontFamily: 'ShantellSans-SemiBold',
       fontFamily: 'NotoSansDevanagari_Condensed-SemiBold',
-      letterSpacing: .5
+      letterSpacing: .5,
+      color: '#000000',
+    },
+    instructionsText: {
+      fontFamily: 'Cabin_Condensed-Medium',
+      color: '#3B3B3B',
+      letterSpacing: 0.75,
+      fontSize: 18,
     },
     optionButton: {
       backgroundColor: '#245d28',
@@ -126,9 +146,10 @@ export default (theme: ExtendedTheme) => {
       fontFamily: 'ShantellSans-SemiBold',
     },
     optionIndexText: {
-      fontSize: 21,
+      fontSize: 19,
       fontFamily: 'NotoSansDevanagari_Condensed-SemiBold',
-      marginLeft: 10
+      marginLeft: 10,
+      color: '#474646',
     },
     optionsMainContainer: {
       flexDirection: 'column',
@@ -173,13 +194,16 @@ export default (theme: ExtendedTheme) => {
       color: '#FFFFFF'
     },
     btnContainer: {
-      marginTop: hp('30%')
+      height: hp('15%'),
+      backgroundColor: '#ffffff',
+      justifyContent: 'center',
+      elevation: 2,
     },
     buttonView: {
       padding: 10,
       flexDirection: 'row',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
     },
-    option: undefined
+    option: {},
   })
 };

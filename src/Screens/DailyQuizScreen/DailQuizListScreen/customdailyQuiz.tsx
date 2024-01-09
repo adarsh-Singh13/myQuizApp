@@ -14,21 +14,21 @@ export default function CustomdailyQuiz({ quizData }: any): React.JSX.Element {
 
   const navigation = useNavigation();
   
-  // console.log("mmmm", quizData);
+  // console.log("mmmm", quizData.quizId, quizData.title);
   
   const handlePressNew = () => {
     if (!showDownload){
-      navigation.navigate('Instructions');
+      navigation.navigate('Instructions', { quizId: quizData.quizId, quizData: quizData } as {quizId: any, quizData: any});
     }
   };
 
 
-  const handlePress = () => {
+  const handlePressIconChange = () => {
     if (showDownload) {
-      console.log('Download action');
+      // console.log('Download action');
       setShowDownload(false);
     } else {
-      navigation.navigate('Instructions');
+      navigation.navigate('Instructions', { quizId: quizData.quizId, quizData: quizData } as {quizId: any, quizData: any});
     }
   };
 
@@ -47,17 +47,17 @@ export default function CustomdailyQuiz({ quizData }: any): React.JSX.Element {
         </View>
         <View style={styles.quizallTextAndIconCont}>
           <View style={{flexDirection: "row", 
-          width: wp('67%'),
+          width: wp('66%'),
           height: wp('18%'),
           position: "absolute",
           // backgroundColor: "red"
           flexWrap: "wrap"
           }}>
-            <Text style={styles.quizTopicTitle}>{quizData.topic}: </Text>
-            <Text style={styles.quizTopicTitle}>{quizData.topic_Exam} l </Text>
+            <Text style={styles.quizTopicTitle}>{quizData.topic} :</Text>
+            <Text style={styles.quizTopicTitle}> {quizData.title} </Text>
             <Text style={[styles.quizTopicTitle, { letterSpacing: 0.3,}]}>{HelperService.currentDateStringWithDotFormat()}</Text>
           </View>
-          <TouchableOpacity style={styles.icon} onPress={handlePress}>
+          <TouchableOpacity style={styles.icon} onPress={handlePressIconChange}>
           {showDownload ? (
             <React.Fragment>
               <Icon name='download' size={15} color={'red'} />

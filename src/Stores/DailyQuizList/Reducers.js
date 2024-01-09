@@ -28,7 +28,7 @@ const fetchMyAllQuizListDetailsFailure = (state) => ({
 });
 
 export const reducer = createReducer(INITIAL_STATE, {
-  [QuizDataListTypes.GET_MY_ALL_QUIZ_LIST_DETAILS_LOADING]: fetchMyAllQuizListDetailsLoading,
-  [QuizDataListTypes.GET_MY_ALL_QUIZ_LIST_DETAILS_SUCCESS]: fetchMyAllQuizListDetailsSuccess,
-  [QuizDataListTypes.GET_MY_ALL_QUIZ_LIST_DETAILS_FAILURE]: fetchMyAllQuizListDetailsFailure,
+  [QuizDataListTypes.FETCH_MY_ALL_QUIZ_LIST_DETAILS_LOADING]: fetchMyAllQuizListDetailsLoading,
+  [QuizDataListTypes.FETCH_MY_ALL_QUIZ_LIST_DETAILS_SUCCESS]: fetchMyAllQuizListDetailsSuccess,
+  [QuizDataListTypes.FETCH_MY_ALL_QUIZ_LIST_DETAILS_FAILURE]: fetchMyAllQuizListDetailsFailure,
 });

@@ -69,7 +69,7 @@
           "Sydney",
           "Adelaide"
         ],
-        "correctOption": "Paris",
+        "correctOption": "Canberra",
         "positiveMarks": "1.2",
         "negativeMarks": "0.25"
       },
@@ -143,75 +143,76 @@
   {
     "quizId": "2",
     "title": "English",
+    "topic": "Reading Comprehension",
     "timing": 600,
-    "topic": "General Awareness Quiz",
     "topic_Exam": "IBPS Bank PO/Clerk",
     "exam_year": "2023",
     "rewards": "10",
     "totalQuestions": [
       {
         "id": 1,
-        "question": "What is the capital of India?",
+        "instruction": "Forty kilometers northeast of Portland, Victoria lies Lake Condah, an extraordinary destination showcasing remnants of ancient Aboriginal settlements. Among its features are numerous circular stone foundations marking hundreds of huts, rock-lined water pathways, and tools crafted from unusual rocks not native to the region. The lake was historically renowned for its abundant fish, and the engineering marvels of the Aboriginal community are evident in the intricate fish-trapping systems they devised. Elaborate waterways were ingeniously constructed by diverting streams, erecting stone barriers, and carving out new channels. Strategically positioned rock barriers served as weirs, guiding eels and fish into specially crafted conical baskets. Remarkably, these fish-trapping methods have endured through time, showing little alteration to this day. Adjacent to some of the larger traps lie the outlines of rectangular ponds, likely designed to house and preserve caught fish. Scattered atop the bluffs overlooking the lake, remnants of ancient dwellings in the form of stone circles are all that remain. Interestingly, not all stones used were sourced locally. The varying sizes of the huts suggest diverse purposes, but all shared door gaps positioned on the sheltered side, shielding against prevailing winds. One proposed theory posits that the stone walls may have only reached waist to shoulder height, topped by branches and potentially packed with mud as roofing material. This site offers a glimpse into a semi-settled community, challenging the stereotypical view of nomadic hunter-gatherers in desolate landscapes.",
+        "question": "What engineering marvels are showcased at Lake Condah?",
         "options": [
-          "Mumbai",
-          "Delhi",
-          "Kolkata",
-          "Lucknow" 
+          "Numerous circular stone foundations",
+          "Rock-lined water pathways",
+          "Tools crafted from unusual rocks",
+          "All of the above"
         ],
-        "correctOption": "Paris",
+        "correctOption": "All of the above",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 2,
-        "question": "What is the capital of France?",
+        "question": "What was the historical significance of Lake Condah?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Rome"
+          "Abundant fish",
+          "Rare rocks",
+          "Semi-settled community",
+          "Nomadic settlements"
         ],
-        "correctOption": "Delhi",
+        "correctOption": "Abundant fish",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 3,
-        "question": "What is the capital of Russia?",
+        "question": "What purpose did the rectangular ponds serve?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Moscow"
+          "Fishing",
+          "Preservation of fish",
+          "Drinking water",
+          "Boat docking"
         ],
-        "correctOption": "Moscow",
-        "positiveMarks": "1.3",
+        "correctOption": "Preservation of fish",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 4,
-        "question": "What is the capital of China?",
+        "question": "What is proposed about the construction of ancient dwellings?",
         "options": [
-          "SHanghai",
-          "Tokyo",
-          "Beijing",
-          "None of These"
+          "They were made entirely of locally sourced stones.",
+          "Their walls reached waist to shoulder height.",
+          "They had door gaps on the windy side.",
+          "They had roofs made of branches."
         ],
-        "correctOption": "Beijing",
+        "correctOption": "Their walls reached waist to shoulder height.",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 5,
-        "question": "What is the capital of Australia?",
+        "question": "What does the site at Lake Condah challenge?",
         "options": [
-          "Perth",
-          "Canberra",
-          "Sydney",
-          "Adelaide"
+          "Aboriginal settlements",
+          "Nomadic hunter-gatherer stereotypes",
+          "Desolate landscapes",
+          "Engineering marvels"
         ],
-        "correctOption": "Paris",
-        "positiveMarks": "1.2",
+        "correctOption": "Nomadic hunter-gatherer stereotypes",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       }
     ]
@@ -227,67 +228,69 @@
     "totalQuestions": [
       {
         "id": 1,
-        "question": "What is the capital of Russia?",
+        "instruction": "Among five friends named Alice, Ben, Carol, David, and Emily, each having a distinct profession as a lawyer, doctor, engineer, artist, or architect, and residing in different cities—New York, Los Angeles, Chicago, Houston, and Miami—associate each individual with their profession and city using the following hints: 1. The lawyer resides in Chicago. 2. Emily resides in Miami but isn't the artist. 3. Ben isn't the architect or the engineer and doesn't live in New York. 4. The doctor lives in Houston. 5. Carol works as an artist. 6. David resides in Los Angeles.",
+        "question": "What is Ben's profession and where does he live?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Moscow"
+          "Ben is the architect in New York",
+          "Ben is the engineer in Los Angeles",
+          "Ben is the architect in Miami",
+          "Ben is the engineer in Chicago"
         ],
-        "correctOption": "Paris",
+        "correctOption": "Ben is the architect in Miami",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 2,
-        "question": "What is the capital of India?",
+        "question": "Six friends—Alex, Brian, Chris, David, Eric, and Frank—are seated in a row. Using the clues, determine the order:\n\n1. Brian is not at either end.\n2. Alex is to the right of David but to the left of Chris.\n3. Eric is to the left of Frank but to the right of Brian.\n\nWho is sitting at the extreme right end?",
         "options": [
-          "Mumbai",
-          "Delhi",
-          "Kolkata",
-          "Lucknow"
+          "Frank",
+          "Chris",
+          "Alex",
+          "Brian"
         ],
-        "correctOption": "Delhi",
+        "correctOption": "Frank",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 3,
-        "question": "What is the capital of France?",
+        "instruction": "Five individuals—Alice, Bob, Charlie, David, and Emily—are each donning shirts of different colors: red, blue, green, yellow, and purple. Utilize the clues provided to deduce the color of each person's shirt: 1. Alice's shirt isn't blue or purple. 2. Bob is wearing a green shirt. 3. Charlie's shirt isn't yellow. 4. David's shirt isn't red. 5. Emily's shirt isn't blue or red.",
+        "question": "Which of the following individuals is wearing a yellow shirt?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Rome"
+          "Alice",
+          "Bob",
+          "Charlie",
+          "David"
         ],
-        "correctOption": "Moscow",
-        "positiveMarks": "1.3",
+        "correctOption": "Charlie",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 4,
-        "question": "What is the capital of China?",
+        "question": "What color shirt is Alice wearing?",
         "options": [
-          "SHanghai",
-          "Tokyo",
-          "Beijing",
-          "None of These"
+          "Blue",
+          "Red",
+          "Green",
+          "Purple"
         ],
-        "correctOption": "Beijing",
+        "correctOption": "Green",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 5,
-        "question": "What is the capital of Australia?",
+        "question": "What color is David's shirt?",
         "options": [
-          "Perth",
-          "Canberra",
-          "Sydney",
-          "Adelaide"
+          "Green",
+          "Yellow",
+          "Red",
+          "Blue"
         ],
-        "correctOption": "Paris",
-        "positiveMarks": "1.2",
+        "correctOption": "Yellow",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       }
     ]
@@ -302,76 +305,76 @@
     "timing": 300,
     "totalQuestions": [
       {
-        "id": 4,
-        "question": "What is the capital of China?",
+        "id": 1,
+        "question": "What is the result of 2^10 ÷ (5^2 x 2^3)?",
         "options": [
-          "SHanghai",
-          "Tokyo",
-          "Beijing",
-          "None of These"
+          "16",
+          "32",
+          "64",
+          "128"
         ],
-        "correctOption": "Beijing",
+        "correctOption": "16",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 2,
-        "question": "What is the capital of India?",
+        "question": "If the sum of three consecutive even integers is 72, what is the smallest integer?",
         "options": [
-          "Mumbai",
-          "Delhi",
-          "Kolkata",
-          "Lucknow"
+          "22",
+          "24",
+          "26",
+          "28"
         ],
-        "correctOption": "Delhi",
+        "correctOption": "22",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 3,
-        "question": "What is the capital of Russia?",
+        "question": "A train covers a distance of 540 km at a constant speed. If the speed of the train is 90 km/hr, how long will it take to cover the distance?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Moscow"
+          "4 hours",
+          "6 hours",
+          "9 hours",
+          "12 hours"
         ],
-        "correctOption": "Moscow",
-        "positiveMarks": "1.3",
+        "correctOption": "6 hours",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
-        "id": 1,
-        "question": "What is the capital of France?",
+        "id": 4,
+        "question": "If a square has an area of 121 square centimeters, what is the length of one side of the square?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Rome"
+          "9 cm",
+          "10 cm",
+          "11 cm",
+          "12 cm"
         ],
-        "correctOption": "Paris",
+        "correctOption": "11 cm",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 5,
-        "question": "What is the capital of Australia?",
+        "question": "Solve for x: 3x^2 + 5x - 2 = 0",
         "options": [
-          "Perth",
-          "Canberra",
-          "Sydney",
-          "Adelaide"
+          "x = 1/3 or x = -2",
+          "x = 1 or x = -2/3",
+          "x = 2 or x = -1/3",
+          "x = -1 or x = 2/3"
         ],
-        "correctOption": "Paris",
-        "positiveMarks": "1.2",
+        "correctOption": "x = 1 or x = -2/3",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       }
     ]
   },
   {
     "quizId": "5",
-    "title": "Gen. Knowledge",
-    "topic": "General Awareness Quiz",
+    "title": "English",
+    "topic": "English Vocabulory",
     "topic_Exam": "IBPS Bank PO",
     "exam_year": "2023",
     "rewards": "5",
@@ -379,66 +382,66 @@
     "totalQuestions": [
       {
         "id": 1,
-        "question": "What is the capital of Australia?",
+        "question": "What is the meaning of the word 'Ubiquitous'?",
         "options": [
-          "Perth",
-          "Canberra",
-          "Sydney",
-          "Adelaide"
+          "Unique",
+          "Widespread",
+          "Confined",
+          "Rare"
         ],
-        "correctOption": "Paris",
-        "positiveMarks": "1.2",
+        "correctOption": "Widespread",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 2,
-        "question": "What is the capital of India?",
+        "question": "Select the synonym for 'Pernicious':",
         "options": [
-          "Mumbai",
-          "Delhi",
-          "Kolkata",
-          "Lucknow"
+          "Benevolent",
+          "Harmful",
+          "Friendly",
+          "Neutral"
         ],
-        "correctOption": "Delhi",
+        "correctOption": "Harmful",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 3,
-        "question": "What is the capital of Russia?",
+        "question": "What does 'Ephemeral' mean?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Moscow"
+          "Temporary",
+          "Permanent",
+          "Everlasting",
+          "Sporadic"
         ],
-        "correctOption": "Moscow",
-        "positiveMarks": "1.3",
+        "correctOption": "Temporary",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 4,
-        "question": "What is the capital of China?",
+        "question": "Which word is an antonym for 'Abundant'?",
         "options": [
-          "SHanghai",
-          "Tokyo",
-          "Beijing",
-          "None of These"
+          "Plentiful",
+          "Ample",
+          "Scarce",
+          "Sufficient"
         ],
-        "correctOption": "Beijing",
+        "correctOption": "Scarce",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 5,
-        "question": "What is the capital of France?",
+        "question": "Define 'Verbose':",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Rome"
+          "Concise",
+          "Talkative",
+          "Muted",
+          "Pithy"
         ],
-        "correctOption": "Paris",
+        "correctOption": "Talkative",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
@@ -511,76 +514,76 @@
   },
   {
     "quizId": "6",
-    "title": "English",
-    "timing": 600,
+    "title": "Gen. Knowledge",
     "topic": "General Awareness Quiz",
+    "timing": 600,
     "topic_Exam": "IBPS Bank PO/Clerk",
     "exam_year": "2023",
     "rewards": "10",
     "totalQuestions": [
       {
         "id": 1,
-        "question": "What is the capital of France?",
+        "question": "Which planet is known as the 'Red Planet'?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Rome"
+          "Mars",
+          "Venus",
+          "Jupiter",
+          "Mercury"
         ],
-        "correctOption": "Paris",
+        "correctOption": "Mars",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 2,
-        "question": "What is the capital of India?",
+        "question": "Who is the current Prime Minister of India (as of 2022)?",
         "options": [
-          "Mumbai",
-          "Delhi",
-          "Kolkata",
-          "Lucknow"
+          "Narendra Modi",
+          "Rahul Gandhi",
+          "Amit Shah",
+          "Manmohan Singh"
         ],
-        "correctOption": "Delhi",
+        "correctOption": "Narendra Modi",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 3,
-        "question": "What is the capital of Russia?",
+        "question": "What is the currency of Japan?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Moscow"
+          "Yen",
+          "Won",
+          "Peso",
+          "Rupee"
         ],
-        "correctOption": "Moscow",
-        "positiveMarks": "1.3",
+        "correctOption": "Yen",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 4,
-        "question": "What is the capital of China?",
+        "question": "Which country is known as the 'Land of the Rising Sun'?",
         "options": [
-          "SHanghai",
-          "Tokyo",
-          "Beijing",
-          "None of These"
+          "China",
+          "Korea",
+          "Japan",
+          "Thailand"
         ],
-        "correctOption": "Beijing",
+        "correctOption": "Japan",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 5,
-        "question": "What is the capital of Australia?",
+        "question": "Who wrote the famous play 'Romeo and Juliet'?",
         "options": [
-          "Perth",
-          "Canberra",
-          "Sydney",
-          "Adelaide"
+          "William Shakespeare",
+          "Charles Dickens",
+          "Jane Austen",
+          "Mark Twain"
         ],
-        "correctOption": "Paris",
-        "positiveMarks": "1.2",
+        "correctOption": "William Shakespeare",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       }
     ]
@@ -588,7 +591,7 @@
   {
     "quizId": "7",
     "title": "Reasoning",
-    "topic": "Reasoning Puzzle Quiz",
+    "topic": "Reasoning Mixed Quiz",
     "topic_Exam": "IBPS Bank PO",
     "exam_year": "2023",
     "rewards": "5",
@@ -596,67 +599,67 @@
     "totalQuestions": [
       {
         "id": 1,
-        "question": "What is the capital of France?",
+        "question": "If A is taller than B, and B is taller than C, who among them is the shortest?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Rome"
+          "A",
+          "B",
+          "C",
+          "Cannot be determined"
         ],
-        "correctOption": "Paris",
+        "correctOption": "C",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 2,
-        "question": "What is the capital of India?",
+        "question": "Which number comes next in the series: 2, 5, 10, 17, ___?",
         "options": [
-          "Mumbai",
-          "Delhi",
-          "Kolkata",
-          "Lucknow"
+          "24",
+          "26",
+          "27",
+          "32"
         ],
-        "correctOption": "Delhi",
+        "correctOption": "26",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 3,
-        "question": "What is the capital of Russia?",
+        "question": "Arrange the following words in alphabetical order: Monitor, Memory, Mouse, Modem",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Moscow"
+          "Memory, Modem, Monitor, Mouse",
+          "Modem, Memory, Monitor, Mouse",
+          "Monitor, Modem, Memory, Mouse",
+          "Memory, Monitor, Mouse, Modem"
         ],
-        "correctOption": "Moscow",
-        "positiveMarks": "1.3",
+        "correctOption": "Memory, Modem, Monitor, Mouse",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 4,
-        "question": "What is the capital of China?",
+        "question": "If RED is written as 27, then how is CAT written?",
         "options": [
-          "SHanghai",
-          "Tokyo",
-          "Beijing",
-          "None of These"
+          "15",
+          "18",
+          "24",
+          "27"
         ],
-        "correctOption": "Beijing",
+        "correctOption": "24",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 5,
-        "question": "What is the capital of Australia?",
+        "question": "If Monday is three days before the day after tomorrow, what day is it today?",
         "options": [
-          "Perth",
-          "Canberra",
-          "Sydney",
-          "Adelaide"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
         ],
-        "correctOption": "Paris",
-        "positiveMarks": "1.2",
+        "correctOption": "Tuesday",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       }
     ]
@@ -665,74 +668,74 @@
     "quizId": "8",
     "title": "Quant",
     "topic": "Quantitative Based Quiz",
-    "topic_Exam": "IBPS Bank PO",
+    "topic_Exam": "IBPS/SBi Bank Clerk",
     "exam_year": "2023",
     "rewards": "5",
     "timing": 300,
     "totalQuestions": [
       {
         "id": 1,
-        "question": "What is the capital of France?",
+        "question": "What is the square root of 144?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Rome"
+          "10",
+          "12",
+          "14",
+          "16"
         ],
-        "correctOption": "Paris",
+        "correctOption": "12",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 2,
-        "question": "What is the capital of India?",
+        "question": "If a shirt is sold for $90 at a 20% profit, what is its cost price?",
         "options": [
-          "Mumbai",
-          "Delhi",
-          "Kolkata",
-          "Lucknow"
+          "$75",
+          "$80",
+          "$85",
+          "$100"
         ],
-        "correctOption": "Delhi",
+        "correctOption": "$75",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 3,
-        "question": "What is the capital of Russia?",
+        "question": "If 3x - 7 = 20, what is the value of x?",
         "options": [
-          "Berlin",
-          "Paris",
-          "Madrid",
-          "Moscow"
+          "9",
+          "10",
+          "12",
+          "15"
         ],
-        "correctOption": "Moscow",
-        "positiveMarks": "1.3",
+        "correctOption": "9",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 4,
-        "question": "What is the capital of China?",
+        "question": "What is the value of π (pi) to the nearest hundredth?",
         "options": [
-          "SHanghai",
-          "Tokyo",
-          "Beijing",
-          "None of These"
+          "3.12",
+          "3.14",
+          "3.16",
+          "3.18"
         ],
-        "correctOption": "Beijing",
+        "correctOption": "3.14",
         "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       },
       {
         "id": 5,
-        "question": "What is the capital of Australia?",
+        "question": "If a car travels at a speed of 60 mph, how far will it travel in 2.5 hours?",
         "options": [
-          "Perth",
-          "Canberra",
-          "Sydney",
-          "Adelaide"
+          "125 miles",
+          "140 miles",
+          "150 miles",
+          "160 miles"
         ],
-        "correctOption": "Paris",
-        "positiveMarks": "1.2",
+        "correctOption": "150 miles",
+        "positiveMarks": "1.0",
         "negativeMarks": "0.25"
       }
     ]

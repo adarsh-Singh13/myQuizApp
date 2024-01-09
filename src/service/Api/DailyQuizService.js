@@ -12,7 +12,7 @@ const getAllQuizApiClient = axios.create({
   },
 });
 
- function getDailyQuizData(params: { token: string }) {
+ function fetchMyAllQuizListDetails(params: { token: string }) {
   console.log("FETCH RESPDATA", params);
   
     return getAllQuizApiClient.get('', {
@@ -33,6 +33,6 @@ const getAllQuizApiClient = axios.create({
   } 
 
 export const DailyQuizService = {
-  getDailyQuizData,
+  fetchMyAllQuizListDetails,
 };
 

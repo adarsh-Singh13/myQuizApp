@@ -9,7 +9,7 @@ export function* fetchAllQuizzesSaga(payload) {
   yield put(QuizDataListTypes.fetchMyAllQuizListDetailsLoading());
 
   try {
-    let successData = yield call(DailyQuizService.getDailyQuizData, payload);
+    let successData = yield call(DailyQuizService.fetchMyAllQuizListDetails, payload);
 
     if (successData) {
       yield put(QuizDataListTypes.fetchMyAllQuizListDetailsSuccess(successData));  

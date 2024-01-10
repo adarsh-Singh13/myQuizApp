@@ -242,7 +242,8 @@
       },
       {
         "id": 2,
-        "question": "Six friends—Alex, Brian, Chris, David, Eric, and Frank—are seated in a row. Using the clues, determine the order:\n\n1. Brian is not at either end.\n2. Alex is to the right of David but to the left of Chris.\n3. Eric is to the left of Frank but to the right of Brian.\n\nWho is sitting at the extreme right end?",
+        "instruction": "Six friends—Alex, Brian, Chris, David, Eric, and Frank—are seated in a row. Using the clues, determine the order: 1. Brian is not at either end. 2. Alex is to the right of David but to the left of Chris. 3. Eric is to the left of Frank but to the right of Brian. ",
+        "question": "Who is sitting at the extreme right end?",
         "options": [
           "Frank",
           "Chris",

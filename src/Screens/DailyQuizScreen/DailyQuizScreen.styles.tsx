@@ -7,6 +7,7 @@ interface Style {
     option: ViewStyle;
     container: ViewStyle;
     containerBar: ViewStyle;
+    contShadow: ViewStyle;
     questionContainer: ViewStyle;
     questionContainerFirst: ViewStyle;
     marksContainer: ViewStyle;
@@ -47,15 +48,21 @@ export default (theme: ExtendedTheme) => {
     scrollViewContent: {
       flexGrow: 1, 
       justifyContent: 'flex-start',
-      // backgroundColor: 'red',
+      backgroundColor: '#F7F7F7',
       paddingBottom: hp('13%')
     },
     containerBar: {
       //  paddingTop: 5,
       backgroundColor: '#ffffff',
-      elevation: 2,
+      // elevation: 5,
       justifyContent: 'space-evenly',
       alignItems: 'stretch',
+    },
+    contShadow: {
+      shadowColor: '#171717',
+      shadowOffset: {width: 2, height: 6},
+      shadowOpacity: 1,
+      shadowRadius: 5,
     },
     scrollInnerViewContent: {
       paddingHorizontal: wp('0.5%'), 
@@ -125,7 +132,7 @@ export default (theme: ExtendedTheme) => {
       fontFamily: 'Cabin_Condensed-Medium',
       color: '#3B3B3B',
       letterSpacing: 0.75,
-      fontSize: 18,
+      fontSize: 19,
     },
     optionButton: {
       backgroundColor: '#245d28',

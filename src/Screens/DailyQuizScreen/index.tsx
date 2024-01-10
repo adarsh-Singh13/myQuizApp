@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Alert } from 'react-native';
-import { useTheme, useRoute } from '@react-navigation/native';
+import { useTheme, useRoute, useNavigation } from '@react-navigation/native';
 /** 
  * ? local imports
 */
@@ -25,24 +25,30 @@ export default function DailyQuizScreen() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
+  const [showPauseIconAlert, setShowPauseIconAlert] = useState(false);
+  const [ textshown, setTextShown ] = useState(false);
+  const [ textLength, setTextLength ] = useState(false);
+  const [isActive, setIsActive] = useState(false)
 
   const route = useRoute();
   const { quizId, quizData }: any = route.params ?? {};
-
+  const navigation = useNavigation();
   const currentQuestion = quizData.totalQuestions[currentQuestionIndex];
   const questionOptions = currentQuestion.options;
   const questionsArray = quizData?.totalQuestions || [];
   const numOfQuestions = questionsArray.length;
   // console.log(questionsArray);
-  // console.log(currentQuestion?.instruction);
+  // console.log(currentQuestion);
   // console.log(quizData[0].timing);
+  // console.log("quizData[0].timing", quizData.timing);
 
   const handleCancel = () => {
     setShowAlert(false);
   };
 
   const handleConfirm = () => {
-    setShowAlert(false);
+    // console.log("SUBMITPRESSED");
+    navigation.navigate("DailyQuizList");
   };
 
   const handleOptionClick = (index: any) => {
@@ -59,13 +65,59 @@ export default function DailyQuizScreen() {
     }
   };
 
+  const handleSubmitText = () => {
+    setShowAlert(true);
+    
+  }
 
+  const handleShowTextLines = () => {
+    setTextShown(!textshown);
+  };
+
+  const onTextLengthLayout = useCallback((e: { nativeEvent: { lines: string | any[]; }; }) => {
+    setTextLength(e.nativeEvent.lines.length>=4);
+    // console.log("e.NATIVE", e.nativeEvent);
+    
+  }, [])
+
+  const onPressIconSubmitHandler = () => {
+    navigation.navigate("DailyQuizList");
+  }
+
+  const onPressIconCancelHandler = () => {
+    setShowPauseIconAlert(false);
+  }
+
+  const handlePauseButtonPress = () => {
+    setShowPauseIconAlert(true); // Set showAlert to true to display the CustomAlert
+    setIsActive(false)
+  };
+
+  const onFilterPressed = () => {
+    console.log("FILTER PRESSED");
+    
+  }
 
   return (
     <View style={{flex: 1, }}>
       <View style={{flex: 7/8, }}>
-      <View style={styles.containerBar}>
-        <QuizHeaderContent />
+      <View style={[styles.containerBar, styles.contShadow]}>
+        <QuizHeaderContent 
+        OnPressTimeIcon={handlePauseButtonPress}
+        QuizTitleTime={quizData.timing}
+        QuizTitleText={quizData.title}
+        onFilterPressed={onFilterPressed}
+        isActive={isActive}        />
+        {showPauseIconAlert && (
+            <CustomAlert
+              visible={showPauseIconAlert}
+              message="Are you sure you want to pause this test ?"
+              onCancel={onPressIconCancelHandler}
+              onConfirm={onPressIconSubmitHandler}
+              OnResume={'OK'}
+              Submit={'Yes, Pause'}
+            />
+          )}
       </View>
           <ScrollView contentContainerStyle={styles.scrollViewContent}>
             <View style={styles.scrollInnerViewContent}>
@@ -100,7 +152,24 @@ export default function DailyQuizScreen() {
               currentQuestion?.instruction ? (
                 <View style={{ marginLeft: wp('5%') }}>
               <Text style={styles.questText}>Instructions: </Text>
-              <Text style={styles.instructionsText}>{currentQuestion?.instruction}</Text>
+              <Text
+              onTextLayout={onTextLengthLayout}
+              numberOfLines={textshown ? undefined: 4} 
+              style={styles.instructionsText}>{currentQuestion?.instruction}</Text>
+               {
+                  textLength ? <Text
+                  onPress={handleShowTextLines}
+                  style={{  
+                    marginTop: hp('0.5%'),
+                    marginRight: wp('3.5%'),
+                    alignSelf: 'flex-end',
+                    color: '#0E28EE' 
+                  }}
+                  >
+                    {textshown ? 'Read less...' : 'Read more...'}
+                    </Text>
+                  :null
+              }
             </View>
               ) : []
             }
@@ -134,13 +203,15 @@ export default function DailyQuizScreen() {
           </ScrollView>
       </View>
       <View style={{flex: 1/8, marginTop: hp('-10%')}}>
-        <View style={styles.btnContainer}>
+        <View style={[styles.btnContainer, styles.contShadow]}>
           <View>
             <CustomAlert
               visible={showAlert}
               message="Once you submit the test, you cannot resume. Are you sure you want to submit ?"
               onCancel={handleCancel}
               onConfirm={handleConfirm}
+              OnResume={'RESUME'}
+              Submit={'SUBMIT'}
               />
           </View>
           <View style={styles.buttonView}>
@@ -148,7 +219,7 @@ export default function DailyQuizScreen() {
               text={'Submit Test'}
               labelStyle={styles.labelStyle}
               textStyle={styles.textStyle}
-              onPress={() => { }}
+              onPress={handleSubmitText}
               />
             <Buttons
               text={'Save & Next  >'}

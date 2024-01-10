@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-export default function CustomAlert ({ visible, message, onCancel, onConfirm }: any) {
+export default function CustomAlert ({ visible, message, onCancel, onConfirm, OnResume, Submit }: any) {
   return (
     <Modal
       animationType="slide"
@@ -15,10 +15,10 @@ export default function CustomAlert ({ visible, message, onCancel, onConfirm }: 
           <Text style={styles.modalText}>{message}</Text>
           <View style={styles.buttonsContainer}>
             <TouchableOpacity style={styles.button} onPress={onCancel}>
-              <Text style={styles.resumeText}>RESUME</Text>
+              <Text style={styles.resumeText}>{OnResume}</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={onConfirm}>
-              <Text style={styles.submitText}>SUBMIT</Text>
+              <Text style={styles.submitText}>{Submit}</Text>
             </TouchableOpacity>
           </View>
         </View>

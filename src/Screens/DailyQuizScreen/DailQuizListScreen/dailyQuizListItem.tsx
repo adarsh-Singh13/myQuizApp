@@ -8,7 +8,7 @@ export default function  DailyQuizListItem ({ quizData, allQuizList }: any) {
   const [allQuizdata, setAllQuizData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const url = "https://mocki.io/v1/e35c62ea-4b53-45fa-b51b-a928f121fb62";
+  const url = "https://mocki.io/v1/3e70427d-beec-49fa-86cf-f9197df659ad";
   useEffect(() => {
     fetch(url)
       .then((resp) => resp.json())

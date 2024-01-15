@@ -154,7 +154,7 @@ export default (theme: ExtendedTheme) => {
     },
     optionIndexText: {
       fontSize: 19,
-      fontFamily: 'NotoSansDevanagari_Condensed-SemiBold',
+      fontFamily: 'NotoSansDevanagari_Condensed',
       marginLeft: 10,
       color: '#474646',
     },
@@ -163,7 +163,8 @@ export default (theme: ExtendedTheme) => {
     },
     optionContainer: {
       flexDirection: 'row',
-      margin: 10
+      margin: 10,
+      alignContent: 'center',
     },
     optionIndexStyle: {
       borderRadius: 50,
@@ -171,6 +172,7 @@ export default (theme: ExtendedTheme) => {
       height: 40,
       justifyContent: 'center',
       alignItems: 'center',
+      backgroundColor: 'red'
     },
     labelStyle: {
       borderColor: '#d71d1d',

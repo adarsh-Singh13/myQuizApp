@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, PanResponder } from 'react-native';
 import { useTheme, useRoute, useNavigation } from '@react-navigation/native';
 /** 
  * ? local imports
@@ -37,10 +37,6 @@ export default function DailyQuizScreen() {
   const questionOptions = currentQuestion.options;
   const questionsArray = quizData?.totalQuestions || [];
   const numOfQuestions = questionsArray.length;
-  // console.log(questionsArray);
-  // console.log(currentQuestion);
-  // console.log(quizData[0].timing);
-  // console.log("quizData[0].timing", quizData.timing);
 
   const handleCancel = () => {
     setShowAlert(false);
@@ -60,6 +56,7 @@ export default function DailyQuizScreen() {
   const handleSaveAndNextTap = () => {
     if (currentQuestionIndex + 1 < numOfQuestions) {
       setCurrentQuestionIndex(currentQuestionIndex + 1)
+      setSelectedOption(null);
     } else {
       setShowAlert(true)
     }
@@ -95,11 +92,45 @@ export default function DailyQuizScreen() {
 
   const onFilterPressed = () => {
     console.log("FILTER PRESSED");
-    
+    // navigation.navigate("")
+    navigation.openDrawer({
+      screen : 'DrawerStack', 
+      params : {
+        quizData: quizData,
+      }
+    })
   }
 
+  const handleSwipeRight = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+      setSelectedOption(null);
+    }
+  };
+  const handleSwipeLeft = () => {
+    if (currentQuestion + 1 - numOfQuestions) {
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+      setSelectedOption(null);
+    }
+  };
+
+  const panResponderScreen = useMemo(() => {
+    return PanResponder.create({
+      onStartShouldSetPanResponder : () => true,
+      onPanResponderMove :  (e, gestureState) => {
+        const {dx} = gestureState
+        // console.log(dx);
+        if (dx > 50) {
+          handleSwipeRight();
+        } else if (dx < -50) {
+          handleSwipeLeft();
+        }
+      },
+    });
+  }, [handleSwipeRight, handleSwipeLeft])
+
   return (
-    <View style={{flex: 1, }}>
+    <View {...panResponderScreen.panHandlers} style={{flex: 1}}>
       <View style={{flex: 7/8, }}>
       <View style={[styles.containerBar, styles.contShadow]}>
         <QuizHeaderContent 
@@ -187,14 +218,14 @@ export default function DailyQuizScreen() {
                 onPress={() => handleOptionClick(index)}
                 >
                   <View style={styles.optionContainer}>
-                    <View style={[styles.optionIndexStyle, { backgroundColor: selectedOption === index ? '#26A72F' : '#c6c6c6' }]}>
+                    <View style={[styles.optionIndexStyle, { backgroundColor: selectedOption === index ? '#27A730' : '#c6c6c6' }]}>
                       <Text style={styles.optionIndex}>
                         {String.fromCharCode(65 + index)}
                       </Text>
                     </View>
-                    <Text style={styles.optionIndexText}>
-                      {option}
-                    </Text>
+                   <View>
+                   <Text style={styles.optionIndexText}>{option}</Text>
+                   </View>
                   </View>
                 </TouchableOpacity>
               ))}

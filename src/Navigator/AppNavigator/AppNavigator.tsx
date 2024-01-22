@@ -1,3 +1,4 @@
+import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
@@ -17,6 +18,7 @@ import CurrentAffairsScreen from '../../Screens/CurrentAffairs';
 import DailyQuizzesList from '../../Screens/DailyQuizScreen/DailQuizListScreen/dailyQuizzesList';
 import InstructionsCreen from '../../Screens/DailyQuizScreen/InstructionsScreen';
 import DrawerStack from '../DrawerStack';
+import LoadingScreen from '../../Screens/LoadingAnimation/LoadinAnimation';
 
 export type RootStackParamsList = {
   Tab: undefined;
@@ -31,6 +33,7 @@ export type RootStackParamsList = {
   DailyQuizList: undefined;
   Instructions: undefined;
   DrawerStack: undefined;
+  LoadingScreen: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamsList>();
@@ -51,6 +54,7 @@ export default function AppNavigator() {
           <Stack.Screen name={'DrawerStack'} component={DrawerStack} />
           <Stack.Screen name={'DailyQuiz'} component={DailyQuizScreen} />
           <Stack.Screen name={'DailyQuizList'} component={DailyQuizzesList} />
+          <Stack.Screen name={'LoadingScreen'} component={LoadingScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

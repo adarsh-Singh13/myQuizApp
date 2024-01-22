@@ -1,42 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import { View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { createStackNavigator } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
 import { RootStackParamsList } from "../AppNavigator/AppNavigator";
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
 
 import HomeScreen from "../../Screens/HomeScreen";
 import StudyMaterial from "../../Screens/StudyMaterial";
 import { Text } from "react-native";
+import { SegmentedTabControl } from "../../Components/SegmentedTabControl/SegmentedTabControl";
+import Colors from "../../Screens/Constants/Colour";
 
 const Tab = createMaterialTopTabNavigator();
 
-export default function HomeStack () {
-    return (
-    <SafeAreaProvider>
-        <View style={{marginTop: 20}}>
-            <Text>MAINSCREEN</Text>
-        </View>
-        <Tab.Navigator
-        initialRouteName="Feed"
-        screenOptions={{
-            tabBarLabelStyle: { 
-                fontSize: 13, 
-                fontWeight: '600', 
-                letterSpacing: 1,
-                fontFamily: 'Rubik-SemiBold', 
-            },
-            tabBarAndroidRipple: { borderless: false },
-            tabBarStyle: { backgroundColor: "#F3F3F3" , elevation: 2},
-            tabBarActiveTintColor: '#F10B0B',
-            tabBarInactiveTintColor: '#CBCACA',
-            tabBarGap: 6,
+const options = ['Feed', 'Study Material']
 
-        }}
-        >
-        <Tab.Screen name="Feed" component={HomeScreen} />
-        <Tab.Screen name="StudyMaterial" component={StudyMaterial} />
-      </Tab.Navigator>
+export default function HomeStack () {
+
+    const [selectedTab, setSelectedTab] = useState("Feed")
+
+    const navigation = useNavigation();
+
+    return (
+    <SafeAreaProvider style={{
+        flex: 1,
+        backgroundColor: Colors.backGroundBase,
+        // backgroundColor: 'red',
+        }}>
+        <View style={{
+            backgroundColor: Colors.backGroundBase,
+            alignItems: 'center',
+            marginTop: 60
+        }}>
+        <View style={{
+            marginBottom: 10,
+            backgroundColor: 'red'
+            }}/>
+            <SegmentedTabControl 
+                options={options} 
+                selectedOption={selectedTab} 
+                onOptionSelected={setSelectedTab}
+            />
+        </View>
+            {selectedTab === 'Feed' ? <HomeScreen navigation={navigation}/> : <StudyMaterial navigation={navigation}/>}
     </SafeAreaProvider>
     )
 };

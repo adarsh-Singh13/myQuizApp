@@ -25,7 +25,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'myAppAndPractice' do
+target 'myQuizApp' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -45,7 +45,7 @@ target 'myAppAndPractice' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'myAppAndPracticeTests' do
+  target 'myQuizAppTests' do
     inherit! :complete
     # Pods for testing
   end

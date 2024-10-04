@@ -1,18 +1,18 @@
 import axios from 'axios';
 
-function in200s(status: number) {
+function in200s(status) {
   return status >= 200 && status < 300;
 }
 
 const getAllQuizApiClient = axios.create({
-  baseURL: 'https://mocki.io/v1/6496bf6c-838b-46ee-bb25-c303bddc8aec',
+  baseURL: 'https://mocki.io/v1/46b1e508-9357-4dd5-ab8f-3a4ab460f548 ',
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
   },
 });
 
- function fetchMyAllQuizListDetails(params: { token: string }) {
+ function fetchMyAllQuizListDetails(params) {
   console.log("FETCH RESPDATA", params);
   
     return getAllQuizApiClient.get('', {

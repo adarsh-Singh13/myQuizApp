@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.myappandpractice"
+    namespace "com.myQuizApp"
     defaultConfig {
-        applicationId "com.myappandpractice"
+        applicationId "com.myQuizApp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

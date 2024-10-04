@@ -1,4 +1,4 @@
-package com.myappandpractice;
+package com.myQuizApp;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

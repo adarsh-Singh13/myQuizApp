@@ -1,4 +1,4 @@
-package com.myappandpractice;
+package com.myQuizApp;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "myAppAndPractice";
+    return "myQuizApp";
   }
 
   /**

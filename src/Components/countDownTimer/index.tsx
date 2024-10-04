@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 
 interface CountdownTimerProps {
-  initialTime: string;
+  initialTime: number;
   isActive: boolean;
   // onStart: () => void;
   // onPause: () => void;

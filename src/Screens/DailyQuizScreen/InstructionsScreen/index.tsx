@@ -15,14 +15,15 @@ export default function InstructionsCreen() {
   
     const route = useRoute();
     const { quizId, quizData }: any = route.params ?? {};
-    // console.log("quizRoutequizRoute", quizData);    
+    // console.log("quizRoutequizRoute", quizData, quizId);    
 
     const navigation = useNavigation();
   
     // console.log("quizIdquizId", id);
     
     const handleOnstartPress = () => {
-        navigation.navigate('DailyQuiz', { quizId: quizData.quizId, quizData: quizData });
+        // navigation.navigate('DrawerStack', { quizId: quizId, quizData: quizData });
+        navigation.navigate('DrawerStack', { quizId: quizId, quizData: quizData });
     };
 
     const options = ["English", "Hindi"]

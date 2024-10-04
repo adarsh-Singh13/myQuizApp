@@ -4,7 +4,7 @@
  *
  * @format
  */
-
+import 'react-native-gesture-handler';
 import {useState} from 'react';
 import { StyleSheet, StatusBar } from 'react-native';
 import type {StatusBarStyle} from 'react-native';
@@ -14,9 +14,7 @@ import type {StatusBarStyle} from 'react-native';
  */
 
 import AppNavigator from './src/Navigator/AppNavigator/AppNavigator';
-import { Provider } from 'react-redux';
-import store from './src/Stores/Stores/Stores';
-
+import { PaperProvider } from 'react-native-paper';
 const STYLES = ['default', 'dark-content','light-content'] as const;
 const TRANSITIONS = ['fade', 'slide', 'none'] as const;
 
@@ -31,15 +29,18 @@ function App() {
   
   return (
     <>
+    <PaperProvider>
+
     <StatusBar  
         animated={true}
         backgroundColor="#EBEAEA"
         barStyle={statusBarStyle}
         showHideTransition={statusBarTransition}
         hidden={hidden}
-    />
+        />
 
       <AppNavigator/> 
+    </PaperProvider>
 
     </> 
   );
